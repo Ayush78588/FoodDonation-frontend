@@ -58,7 +58,7 @@ const EditProfile = () => {
       address: address,
     };
     //update data on server side fron formData
-    await axios.put(`/user/`, formData).then(
+    await axios.put(`https://fooddonation-backend.onrender.com/user/`, formData).then(
       async (response) => {
         setEdit(!edit); //after edit make edit=false
         await getLoggedIn(); //after updation on database edit again will become true so that it can be edited again

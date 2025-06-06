@@ -20,7 +20,7 @@ const Status = (props) => {
           if (k.target.value === "Donated") {
             // Conditionally update stock if status is "Donated"
             await axios
-              .put(`/bank/updateStock`, {
+              .put(`https://fooddonation-backend.onrender.com/bank/updateStock`, {
                 foodGroup: props.foodGroup,
                 units: props.units,
               })
@@ -29,7 +29,7 @@ const Status = (props) => {
                   // Update status in backend and locally if successful
                   alert("Stock Updated");
                   await axios
-                    .put(`/bank/${props.handle}`, {
+                    .put(`https://fooddonation-backend.onrender.com/bank/${props.handle}`, {
                       id: props.id,
                       status: k.target.value,
                     })
@@ -51,7 +51,7 @@ const Status = (props) => {
           } else if (k.target.value === "Completed") {
             // Conditionally delete stock if status is "Completed"
             await axios
-              .put(`/bank/deleteStock`, {
+              .put(`https://fooddonation-backend.onrender.com/bank/deleteStock`, {
                 foodGroup: props.foodGroup,
                 units: props.units,
               })
@@ -60,7 +60,7 @@ const Status = (props) => {
                   alert("Stock Updated");
                   // Update status in backend and locally if successful
                   await axios
-                    .put(`/bank/${props.handle}`, {
+                    .put(`https://fooddonation-backend.onrender.com/bank/${props.handle}`, {
                       id: props.id,
                       status: k.target.value,
                     })
@@ -86,7 +86,7 @@ const Status = (props) => {
           } else {
             // Update status in backend and locally for other status changes
             await axios
-              .put(`/bank/${props.handle}`, {
+              .put(`https://fooddonation-backend.onrender.com/bank/${props.handle}`, {
                 id: props.id,
                 status: k.target.value,
               })

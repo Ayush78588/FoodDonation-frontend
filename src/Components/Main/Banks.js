@@ -14,7 +14,7 @@ const Banks = () => {
     //setFiltered(r.data) updates the state variable filtered with the received data, typically to update the UI with the new list of banks.
     axios
       .get(
-        `/bank/allBanks/${data.states[state].state}/${data.states[state].districts[district]}`
+        `https://fooddonation-backend.onrender.com/bank/allBanks/${data.states[state].state}/${data.states[state].districts[district]}`
       )
       .then((r) => {
         setFiltered(r.data);

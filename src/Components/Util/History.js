@@ -21,7 +21,7 @@ const History = (props) => {
 
   useEffect(() => {
     axios
-      .get(`/${props.user}/${props.handle}`, { withCredentials: true })
+      .get(`https://fooddonation-backend.onrender.com/${props.user}/${props.handle}`, { withCredentials: true })
       .then((r) => {
         setData(r.data);
       })

@@ -9,7 +9,7 @@ const BanksSearch = (props) => {
   const [data, setData] = useState([]);
   const [selected, setSelected] = useState(-1);
   useEffect(() => {
-    axios.post("/bank/user", props, { withCredentials: true }).then(
+    axios.post("https://fooddonation-backend.onrender.com/bank/user", props, { withCredentials: true }).then(
       async (res) => {
         setData(res.data);
       },

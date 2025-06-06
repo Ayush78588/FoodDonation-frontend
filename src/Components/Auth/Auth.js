@@ -134,7 +134,7 @@ const Auth = (props) => {
     //rest error manage
 
     await axios
-      .post(`/auth/${handle}`, formData, { withCredentials: true })
+      .post(`https://fooddonation-backend.onrender.com/auth/${handle}`, formData, { withCredentials: true })
       .then(
         async (res) => {},
         (err) => alert(err.response.data.errorMessage)
@@ -155,7 +155,7 @@ const Auth = (props) => {
         password: password,
       };
       await axios
-        .post(`/auth/login/${handle}`, formData, { withCredentials: true })
+        .post(`https://fooddonation-backend.onrender.com/auth/login/${handle}`, formData, { withCredentials: true })
         .then(async (res) => {});
       await getLoggedIn();
 

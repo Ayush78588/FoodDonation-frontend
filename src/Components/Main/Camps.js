@@ -11,7 +11,7 @@ const Camps = () => {
   useEffect(() => {
     axios
       .get(
-        `/camps/allCamps/${data.states[state].state}/${data.states[state].districts[district]}/${date}`
+        `https://fooddonation-backend.onrender.com/camps/allCamps/${data.states[state].state}/${data.states[state].districts[district]}/${date}`
       )
       .then((r) => setFiltered(r.data))
       .catch((e) => alert("Something went wrong in MAin camps.js"));

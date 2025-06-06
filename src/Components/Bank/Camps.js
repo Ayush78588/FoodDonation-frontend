@@ -17,7 +17,7 @@ const Camps = () => {
     //The useEffect hook fetches data from the /camps endpoint using Axios. This HTTP request is initiated as soon as the component mounts.
     //Once the data is fetched successfully (then block), it updates the component's state (setData(res.data)) with the retrieved camp data.
     axios
-      .get("/camps")
+      .get("https://fooddonation-backend.onrender.com/camps")
       .then((res) => {
         setData(res.data);
       })

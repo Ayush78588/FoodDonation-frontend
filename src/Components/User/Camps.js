@@ -15,7 +15,7 @@ const Camps = () => {
     //This gets the data as response from server and the url input here is termed as url where client will gets info from server
     //server will respond to get request at this given url location which is also called end point of url
     await axios
-      .get(`/camps/${s}/${d}`)
+      .get(`https://fooddonation-backend.onrender.com/camps/${s}/${d}`)
       .then((res) => {
         setCamps(res.data); //If the request is successful (then block), the function sets the camps state to the response data (res.data) using setCamps(res.data).
       })
@@ -28,7 +28,7 @@ const Camps = () => {
   const register = async (i) => {
     //i is id of bank to register a camp
     await axios
-      .put(`/camps/${i}`)
+      .put(`https://fooddonation-backend.onrender.com/camps/${i}`)
       .then((res) => {
         alert("Registered for food bank");
       })

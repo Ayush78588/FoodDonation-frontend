@@ -9,7 +9,7 @@ const Stock = () => {
   //
   useEffect(() => {
     axios
-      .get("/bank/getStock")
+      .get("https://fooddonation-backend.onrender.com/bank/getStock")
       .then((r) => {
         setData(r.data.stock); //Update State: If the request is successful, it updates the state with the retrieved stock data.
       })

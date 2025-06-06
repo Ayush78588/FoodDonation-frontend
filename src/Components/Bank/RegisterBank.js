@@ -32,7 +32,7 @@ const RegisterBank = (props) => {
     if (props.todo === "register") {
       //Register a New Camp: If props.todo is "register", it sends a POST request to the server to create a new food donation camp.
       await axios
-        .post("/camps", formData, { withCredentials: true })
+        .post("https://fooddonation-backend.onrender.com/camps", formData, { withCredentials: true })
         .then((r) => {
           alert("Registered New Food Donation Camp ✅");
           navigate("/bank/camps");

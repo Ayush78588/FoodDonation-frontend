@@ -53,7 +53,7 @@ const UserForm = () => {
     //Includes Credentials: It includes the user's login credentials (like cookies) with the request to ensure the user is authenticated.
     //axios.post("/user/donate", formData, { withCredentials: true }):sends the donation information (formData) to the server at the "/user/donate" endpoint.
     axios
-      .post("/user/donate", formData, { withCredentials: true })
+      .post("https://fooddonation-backend.onrender.com/user/donate", formData, { withCredentials: true })
       .then((r) => {
         // If the request is successful, show an alert message
         alert("Donation request sent successfully"); // Navigate the user to the donations page
@@ -76,7 +76,7 @@ const UserForm = () => {
       reason: desc,
     };
     axios
-      .post("/user/request", formData, { withCredentials: true })
+      .post("https://fooddonation-backend.onrender.com/user/request", formData, { withCredentials: true })
       .then((r) => {
         alert("Food request sent successfully");
         navigate("/user/requests");

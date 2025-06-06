@@ -72,7 +72,7 @@ const Navbar = (props) => {
                     to="/"
                     onClick={async () => {
                       await axios
-                        .get("/auth/logout", { withCredentials: true })
+                        .get("https://fooddonation-backend.onrender.com/auth/logout", { withCredentials: true })
                         .then((r) => {});
                       await getLoggedIn();
                     }}

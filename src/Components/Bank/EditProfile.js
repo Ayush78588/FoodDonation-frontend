@@ -83,7 +83,7 @@ const EditProfile = () => {
 
     //axios.put to send an HTTP PUT request to the server at the /bank endpoint with the formData object.
     await axios
-      .put(`/bank`, formData) //If the request is successful (.then):
+      .put(`https://fooddonation-backend.onrender.com/bank`, formData) //If the request is successful (.then):
       //Toggles the edit state variable using setEdit(!edit).
       //Calls the getLoggedIn function to refresh the authentication status or user data.
       //Displays a success alert saying "Blood Bank updated successfully".

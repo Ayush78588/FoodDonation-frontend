@@ -75,7 +75,7 @@ const CampsCheck = (props) => {
                     //This PUT request typically updates the backend database with the new units value for the specific donation (props.data._id). The units value is sent in the request body.
                     await axios
                       .put(
-                        `/camps/${props.camp}/${props.data._id._id}`,
+                        `https://fooddonation-backend.onrender.com/camps/${props.camp}/${props.data._id._id}`,
                         { units: units },
                         { withCredentials: true }
                       )
