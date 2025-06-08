@@ -48,7 +48,7 @@ export default function App() {
                     </div>
                   }
                 />
-              ) : (
+              ) : ( 
                 <Route
                   path="/user/:handle?"
                   element={
